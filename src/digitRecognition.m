@@ -78,7 +78,7 @@ W = cell([1,l-1]);                                              % Weight
 b = cell([1,l-1]);                                              % Bias
 
 for i = 1:l-1
-    W{i} = randn(n(i+1),n(i));
+    W{i} = randn(n(i+1),n(i))/sqrt(n(i+1));                           %Factored normal distribution by square root of number of nodes in a layer
     b{i} = randn(n(i+1),1);
 end
 

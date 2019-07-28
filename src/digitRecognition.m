@@ -19,9 +19,9 @@ clc
 % training data in each mini batch, and the learning rate.
 
 nh = [30];                                                      % one hidden layer with 30 nodes
-epoch = 1;                                                      % training epochs
-mini_batch_size = 10;                                           % mini bacth size
-eta = 3.0;                                                      % learning rate
+epoch = 30;                                                      % training epochs
+mini_batch_size = 30;                                           % mini bacth size
+eta = 0.0075;                                                      % learning rate
 
 %% Load the MNIST data
 % The provided MNIST data is saved in a zip file as a python _pickle_

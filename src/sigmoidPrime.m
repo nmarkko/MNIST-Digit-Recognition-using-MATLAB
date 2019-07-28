@@ -5,5 +5,6 @@ function y = sigmoidPrime(X)
 %
 %   see also: sigmoid
 
-y = sigmoid(X).*(1-sigmoid(X));
+%y = sigmoid(X).*(1-sigmoid(X));
+y=0.1+0.9*double(X>0);
 end

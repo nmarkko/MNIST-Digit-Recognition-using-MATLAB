@@ -6,5 +6,5 @@ function y = sigmoid(X)
 %   see also: exp
 
 %y = 1./(1+exp(-X));
-y=max(0.1*X, X);
+y=max(0.001*X, X);
 end

@@ -41,6 +41,8 @@ for i=1:20
             if j+4+y_diff > 0
              if j+4+y_diff <= 28
                 P(i+4+x_diff,j+4+y_diff)=J(i,j);
+                end
+                end
             end
         end
     end

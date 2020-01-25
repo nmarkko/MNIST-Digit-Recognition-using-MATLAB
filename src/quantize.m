@@ -1,6 +1,8 @@
 %broj bita odbirka (format je 1.23)
-word_length = 16;
-fraction_length = 12;
+%word_length = 16;
+%fraction_length = 12;
+word_length = 18;
+fraction_length = 14;
 
 struct.mode = 'fixed';
 strct.roundmode = 'floor';
@@ -9,10 +11,12 @@ struct.format = [word_length fraction_length];
 q = quantizer(struct);
 
 %koeficijenti filtra
-fileIDb = fopen('input_image.txt','w');
-for i=1:784
-    fprintf(fileIDb,num2bin(q,mnist{2,1}(1, i)));
-    fprintf(fileIDb,'\n');
+fileIDb = fopen('input_images.txt','w');
+for j=1:10
+    for i=1:784
+        fprintf(fileIDb,num2bin(q,mnist{2,1}(j, i)));
+        fprintf(fileIDb,'\n');
+    end
 end
 fclose(fileIDb);
 

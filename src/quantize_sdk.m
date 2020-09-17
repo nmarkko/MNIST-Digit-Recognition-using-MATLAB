@@ -57,7 +57,7 @@ fclose(fileIDb);
 
 fileIDb = fopen('biases_sdk.txt','w');
 fprintf(fileIDb,'u32 bias_array[2][30]={ {');
-for i=1:10
+for i=1:30
     fprintf(fileIDb,'0x');
     fprintf(fileIDb,num2hex(q,b{1,1}(i,1)));
     fprintf(fileIDb,', \n');

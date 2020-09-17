@@ -28,7 +28,8 @@ fprintf(fileIDb,'};');
 fclose(fileIDb);
 
 fileIDb = fopen('weights_sdk.txt','w');
-fprintf(fileIDb,'u32 weight_array[2][784]={ {');
+%784*30=23520 max number of weights in a layer
+fprintf(fileIDb,'u32 weight_array[2][23520]={ {');
 for i=1:30
     for j=1:784
         fprintf(fileIDb,'0x');
